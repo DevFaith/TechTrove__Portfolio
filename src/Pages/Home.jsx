@@ -1,10 +1,18 @@
 import React from 'react';
-import Image1 from '../assets/image1.png';
+import Port from '../assets/port.webp';
+import Portfolio from '../assets/portfolio.jpg';
 
 const Home = () => {
   return (
-    <div className='w-full h-screen bg-gray-50 flex justify-center items-center'>
-      <div className='w-3/4 h-3/4  rounded-sm p-10 flex flex-col md:flex-row items-center'>
+    
+    <div className=' w-full '>
+      <div className="w-full h-1/6">
+  <img src={Portfolio} alt="" className="w-full h-full mb-8 transition-transform transform hover:scale-105" title="Portfolio" />
+</div>
+
+    <div className='w-full   rounded-sm p-10 flex flex-col md:flex-row items-center'>
+      
+      <div className='w-full   rounded-sm p-10 flex flex-col md:flex-row items-center justify-center'>
         <div className='w-full md:w-1/2 flex flex-col justify-center items-start p-5'>
           <h1 className='text-gray-800 text-4xl font-bold pb-4'>Hello, I'm Faith</h1>
           <p className='text-lg'>
@@ -28,10 +36,11 @@ const Home = () => {
             Skilled in various technologies, I enjoy working on projects that make a difference. Let's connect and create something amazing together!
           </p>
         </div>
-        <div className='w-full md:w-1/2 flex justify-center items-center p-5'>
-          <img src={Image1} alt="Profile" className='w-3/4 md:w-full rounded-lg shadow-lg' />
+        <div className='w-full md:w-1/2 flex justify-center items-center p-10'>
+          <img src={Port} alt="Profile" className='w-3/4 md:w-full rounded-lg ' />
         </div>
       </div>
+    </div>
     </div>
   );
 };
