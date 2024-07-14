@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(false);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <div className='w-full h-16 bg-gray-100 shadow-sm px-5 flex justify-between items-center fixed top-0 left-0 z-50'>
         <div className='flex justify-start gap-20 items-center'>
-          <h1 className='text-xl font-bold text-gray-950'>Dev_Faith</h1>
+          <h1 className='text-xl font-bold text-gray-950 transition-transform transform hover:scale-105'>Dev_Faith</h1>
         </div>
         <div className='hidden md:flex justify-center items-center'>
           <ul className='flex gap-8 text-gray-800 text-md'>
